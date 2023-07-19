@@ -1,6 +1,8 @@
 from django.db import models
+from Vendors.models import Vendor
 
 class Product(models.Model):
+    Vendor = models.ForeignKey(Vendor,null= True, on_delete = models.CASCADE)
     name=models.CharField(max_length=32)
     price=models.DecimalField(max_digits=6,decimal_places=2)
     stock=models.PositiveIntegerField()
