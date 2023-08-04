@@ -92,7 +92,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+MEDIA_ROOT = os.path.join(BASE_DIR,'Image_Folder')
+MEDIA_URL = '/Image_Folder/'
 
+# MEDIA_ROOT = os.path.join(BASE_DIR,'product_edit')
+# MEDIA_URL = '/product_edit/'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
