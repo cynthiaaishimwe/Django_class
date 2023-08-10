@@ -39,4 +39,5 @@ def delete_product(request,id):
     Product.delete()
     return redirect(product_list)
 
-       
+
+

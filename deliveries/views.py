@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from .forms import  Delivery_form
 
-# Create your views here.
+def product_delivery_view(request):
+    if request.method == "POST":
+        form = Delivery_form(request.POST)
+        if form.is_valid():
+            form.save()
+
+    else:
+        form = Delivery_form()
+    return render(request,"Deliveries/deliveries_upload.html",{"form":form})  

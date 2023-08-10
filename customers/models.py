@@ -7,4 +7,3 @@ class Customer(models.Model):
     email=models.CharField(max_length=32)
     age=models.PositiveBigIntegerField()
 
-# Create your models here.

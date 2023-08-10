@@ -21,7 +21,13 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
-    path("inventory/", include("inventory.urls"))
+    path("inventory/", include("inventory.urls")),
+    path("customers/", include("customers.urls")),
+    path("location/", include("location.urls")),
+    path("contact/",include("contact.urls")),
+    path("payments/",include("payments.urls")),
+    path("Vendors/", include("Vendors.urls")),
+    path("deliveries/", include("deliveries.urls")),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
