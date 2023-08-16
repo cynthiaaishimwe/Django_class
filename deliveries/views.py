@@ -9,4 +9,4 @@ def product_delivery_view(request):
 
     else:
         form = Delivery_form()
-    return render(request,"Deliveries/deliveries_upload.html",{"form":form})  
+    return render(request,"Deliveries/deliveries_form.html",{"form":form})  
